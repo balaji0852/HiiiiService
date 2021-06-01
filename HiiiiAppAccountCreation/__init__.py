@@ -17,19 +17,6 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     password = os.environ["password"]
     driver= '{ODBC Driver 17 for SQL Server}'
 
-
-    #post payload sample
-    # {
-    # "authid":"qqqqqqqqqqqqqqqqqqqqqqqqqqqq"
-    # "name":"Balaji R",
-    # "phone":"8151033423",
-    # "email":"Balaji@hiiiiapp.com",
-    # "gender":"male",
-    # "car":"0",
-    # "bike":"1",
-    # "bicycle":"0"
-    # }
-
     #preparing the query string with json payload
     query = "insert into HyeAuthentication values('{}','{}','{}','{}','{}',{},{},{});".format(data.get('authid'),
     data.get('name'),data.get('phone'),data.get('email'),data.get('gender'),data.get('bicycle'),data.get('bike'),data.get('car'))

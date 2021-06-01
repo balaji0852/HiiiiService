@@ -20,18 +20,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     password = os.environ["password"]
     driver= '{ODBC Driver 17 for SQL Server}'
   
-    # writeEmail(data)
-    # return func.HttpResponse('email')
-    # data = {
-    #     "requesterUid":"OLbp05jFuUcNZp2A6LWCQb1hOC62",
-    #     "requesteeUid":"temjXq5Zvrcexcu4wxoxKjA6kBR2",
-    #     "eventId":"dcbe3462-5d95-47e7-8652-0ef6904b6069",
-    #     "requesterName":"Balaji R",
-    #     "requesteeName":"A P Rajkumar",
-    #     "rideDescription": "Bagalur, Bengalure, Karnataka -> WonderLa, Bengaluru, Karnataka",
-    #     "actionDate":"2021-04-28 05:30",
-    #     "rideStartDate":"2021-04-29 05:30",
-    # }
+   
 
     query0 = "select noSeats from event where eventId='{}';".format( data.get('eventId'))
 
@@ -123,7 +112,6 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 
 #     # emailId = "dev.hiiiiapp@gmail.com"
 #     # # os.environ['Email_ActionTypeId5']
-#     # emailPwd = "fuckworldbyB$1"
 #     # # os.environ['EmailPwd_ActionTypeId5']
 #     # smtp_server = "smtp.sendgrid.net"
 #     # port = 587  
@@ -219,7 +207,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 #     # subject="{} accepted your Ride Request | {}".format(data.get('requesteeName'),data.get('rideDescription')[19:]),
 #     # html_content=html)
 #     # try:
-#     #     sg = SendGridAPIClient(os.environ.get('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'))
+#     #     sg = SendGridAPIClient(os.environ.get('*******************************************************'))
 #     #     logging.info('email sent sucessfully')
 #     # except Exception as e:
 #     #     logging.info(e.message)
